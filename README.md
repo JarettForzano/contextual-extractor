@@ -18,7 +18,7 @@ Following these steps we can create accurate descriptions of images and allow fo
 2. Catagorize the slices into relevant groups, such as text or visual.
 3. Reconstruct the slices in order to create images that properly sort out text from visual data.
 4. Decide from a monodirectional or bidirectional approach to feeding in the context into the LLM and providing the image as visual data.
-5. The LLM in theory will be better able to dipict what is occuring in the image.
+5. The LLM in theory will be better able to dipict what is occuring in the image. Providing a more accurate description that can be used in RAG.
 
 What makes it difficult to just extract iamges from papers or web pages?
 
