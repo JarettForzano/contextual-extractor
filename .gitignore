@@ -1,3 +1,4 @@
 __pycache__
 venv
 .env
+CNN_train/small_model2.keras
