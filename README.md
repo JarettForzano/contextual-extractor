@@ -7,7 +7,7 @@ Create a formula able to perfectly deconstruct a paper into its varied component
 
 ### Why
 
-Ideally the question that suffices is what is the purpose? When gathering information from the web for the purposes of creating an agent we need to scrape the web. A huge part of the web is that it is made up of visual data which provides a large amount of context. We cant use OCR as we are just gathering the text from the image and not truly understand what is occuring inside of the image. How do we combat this?
+When gathering information from the web for the purposes of creating an agent we need to scrape a lot of data. A huge part of the web is the visual data which provides a large amount of context. We cant use OCR as we are just gathering the text from the image and not truly understand what is occuring inside of the image. How do we combat this?
 
 We have access to llms now that are capable of understanding images but we need to understand what the best way to feed this data to an llm is.
 
@@ -29,11 +29,25 @@ What makes it difficult to just extract iamges from papers or web pages?
 This provides a much more coherent way to extract visuals from a page.
 
 
-### Technologies we will use
+### The process (simplified)
 1. Train a CNN model to classify the slices as text or visual
 2. Slice a pdf into indivudal peices which we can then feed into the CNN model
 3. After labeling the slices we can then reconstruct the slices into relevant groups
 4. Using a LLM in a mono or bidirectional approach to provide context to the image
+
+
+### Proof of concept progress
+- [X] Able to seperate a pdf into individual slices
+- [ ] Training CNN model to classify slices as text or visual **(Currently seperating data and training the model)**
+- [ ] Reconstructing the slices into relevant groups
+
+### Estimate model size
+#### What I may be able to train seperating the data myself
+- 1000 slices per training class for small model
+- 5000 slices per training class for medium model
+- 10000 slices per training class for large model
+
+#### Possible bias due to how textual data is more abundant than visual data within research papers
 
 ### Diagram Explanation
 
