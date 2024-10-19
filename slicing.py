@@ -45,7 +45,7 @@ def slice_pdf_to_images(input_pdf, output_dir, slice_height):
                 height = original_height - current_y
             rect = fitz.Rect(0, current_y, original_width, current_y + height)
             pix = page.get_pixmap(clip=rect)
-            output_path = Path(output_dir) / f"p3_{slice_number}.png"
+            output_path = Path(output_dir) / f"p5_{slice_number}.png"
             pix.save(output_path)
             current_y += height
             slice_number += 1
