@@ -34,3 +34,7 @@ This provides a much more coherent way to extract visuals from a page.
 2. Slice a pdf into indivudal peices which we can then feed into the CNN model
 3. After labeling the slices we can then reconstruct the slices into relevant groups
 4. Using a LLM in a mono or bidirectional approach to provide context to the image
+
+### Diagram Explanation
+
+![Diagram](diagram.png)
