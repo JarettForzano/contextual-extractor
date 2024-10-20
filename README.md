@@ -2,7 +2,7 @@
 
 ### Idea
 
-Create a formula able to perfectly deconstruct a paper into its varied components and create a optimized way for llms to digest and dipict what occurs within graphs and visual representations such as charts and tables.
+Create a formula able to perfectly deconstruct a paper into its varied components and create a optimized way for llms to digest and depict what occurs within graphs and visual representations such as charts and tables.
 
 
 ### Why
@@ -51,4 +51,4 @@ This provides a much more coherent way to extract visuals from a page.
 
 ### Diagram Explanation
 
-![Diagram](diagram.png)
+![Diagram](Diagram.png)
