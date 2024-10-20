@@ -114,7 +114,7 @@ history = model.fit(
 )
 
 # Save the model using the Keras native format
-model.save('small_model2.keras')
+model.save('small_model3.keras')
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(test_dataset, verbose=2)
