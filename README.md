@@ -40,7 +40,7 @@ This provides a much more coherent way to extract visuals from a page.
 - [X] Able to seperate a pdf into individual slices
 - ~~[ ] Training CNN model to classify slices as text or visual **(Currently seperating data and training the model)**~~
 - [X] Fine tuning the MobileNetV2 model to classify slices as text or visual
-- [ ] Reconstructing the slices into relevant groups
+- [X] Reconstructing the slices into relevant groups
 
 ### Estimate tuning size
 - ~350 slices per class currently
