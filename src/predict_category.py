@@ -13,8 +13,15 @@ def load_and_preprocess_images(image_folder):
             img_path = os.path.join(image_folder, filename)
             img = load_img(img_path, target_size=(224, 224))  # Adjust size as needed
             img_array = img_to_array(img) / 255.0  # Normalize the image
-            images.append(img_array)
-            filenames.append(filename)
+            
+            # Check for blank slice by counting non-white pixels
+            non_white_pixels = np.sum(img_array < 0.95)
+            total_pixels = img_array.size  # Total number of pixels in the image
+            
+            # If more than a small fraction of pixels are non-white, consider it non-blank
+            if non_white_pixels / total_pixels > 0.01:  # Adjust the threshold as needed
+                images.append(img_array)
+                filenames.append(filename)
     
     return np.array(images), filenames
 
