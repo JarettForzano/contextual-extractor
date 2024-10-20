@@ -5,7 +5,7 @@ load_dotenv()
 
 # mv photos/*.png extra_text
 def main():
-    input_pdf = "convert/Training Language Models.pdf"
+    input_pdf = "convert/Deep Learning.pdf"
     output_dir = "photos"
     slice_height = 150
     slice_pdf_to_images(input_pdf, output_dir, slice_height)

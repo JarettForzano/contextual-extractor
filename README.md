@@ -44,8 +44,9 @@ This provides a much more coherent way to extract visuals from a page.
 ### Estimate model size
 #### What I may be able to train seperating the data myself
 - 1000 slices per training class for small model
-- 5000 slices per training class for medium model
-- 10000 slices per training class for large model
+#### The below is what I estimated but recently found that I may only need 1000 slices per class for a decent model
+- ~~5000 slices per training class for medium model~~
+- ~~10000 slices per training class for large model~~
 
 #### Possible bias due to how textual data is more abundant than visual data within research papers
 
