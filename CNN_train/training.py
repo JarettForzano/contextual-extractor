@@ -119,12 +119,3 @@ model.save('small_model3.keras')
 # Evaluate the model
 test_loss, test_acc = model.evaluate(test_dataset, verbose=2)
 print(f'\nTest accuracy: {test_acc}')
-
-# Function to predict on new images
-def predict_image(image_path, model):
-    img = Image.open(image_path).convert('RGB')
-    img = img.resize((224, 224))
-    img_array = np.array(img).astype('float32') / 255.0
-    img_array = np.expand_dims(img_array, axis=0)
-    prediction = model.predict(img_array)
-    return "Visual" if prediction[0][0] > 0.5 else "Text"
