@@ -30,7 +30,7 @@ This provides a much more coherent way to extract visuals from a page.
 
 
 ### The process (simplified)
-1. Train a CNN model to classify the slices as text or visual
+1. ~~Train a CNN model to classify the slices as text or visual~~ Originally I was training a model but after testing and seeing how much better it was to just fine tune the MobileNetV2 model I decided to change my approach
 2. Slice a pdf into indivudal peices which we can then feed into the CNN model
 3. After labeling the slices we can then reconstruct the slices into relevant groups
 4. Using a LLM in a mono or bidirectional approach to provide context to the image
@@ -38,17 +38,13 @@ This provides a much more coherent way to extract visuals from a page.
 
 ### Proof of concept progress
 - [X] Able to seperate a pdf into individual slices
-- [ ] Training CNN model to classify slices as text or visual **(Currently seperating data and training the model)**
+- ~~[ ] Training CNN model to classify slices as text or visual **(Currently seperating data and training the model)**~~
+- [X] Fine tuning the MobileNetV2 model to classify slices as text or visual
 - [ ] Reconstructing the slices into relevant groups
 
-### Estimate model size
-#### What I may be able to train seperating the data myself
-- 1000 slices per training class for small model
-#### The below is what I estimated but recently found that I may only need 1000 slices per class for a decent model
-- ~~5000 slices per training class for medium model~~
-- ~~10000 slices per training class for large model~~
-
-#### Possible bias due to how textual data is more abundant than visual data within research papers
+### Estimate tuning size
+- ~350 slices per class currently
+- 500 pure slices per class is the future goal
 
 ### Diagram Explanation
 

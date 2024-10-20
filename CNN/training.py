@@ -35,6 +35,12 @@ def prepare_dataset(data_dir, image_size=(224, 224)):
 data_dir = './'
 images, labels = prepare_dataset(data_dir)
 
+# Count the occurrences of each label
+unique, counts = np.unique(labels, return_counts=True)
+label_counts = dict(zip(unique, counts))
+
+print(f"Label counts: {label_counts}")
+
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     images, labels, test_size=0.2, random_state=42
@@ -114,7 +120,7 @@ history = model.fit(
 )
 
 # Save the model using the Keras native format
-model.save('small_model3.keras')
+model.save('small_model4.keras')
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(test_dataset, verbose=2)

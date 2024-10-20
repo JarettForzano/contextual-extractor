@@ -2,8 +2,7 @@ import numpy as np
 from PIL import Image
 from tensorflow import keras
 
-# Load the model
-model_path = 'small_model3.keras'
+model_path = 'fine_tuned_mobilenet.keras'
 model = keras.models.load_model(model_path)
 
 def predict_image(image_path, model):
@@ -16,6 +15,6 @@ def predict_image(image_path, model):
     return "Visual" if prediction[0][0] > 0.5 else "Text"
 
 
-new_image_path = 'visual/p7_214.png'
+new_image_path = 'visual/p9_20.png'
 result = predict_image(new_image_path, model)
 print(f"The image is predicted to be: {result}")
