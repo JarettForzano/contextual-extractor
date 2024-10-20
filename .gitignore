@@ -3,4 +3,4 @@ venv
 .env
 models
 
-extra_text
+CNN/extra_text/
